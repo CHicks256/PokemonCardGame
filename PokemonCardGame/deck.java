@@ -11,8 +11,13 @@ public class deck
     String [] pokemon = {"Eevee", "Growlithe", "Cyndaquil",
         "Natu", "Ralts", "Torchic", "Riolu", "Piplup", "Zorua",
         "Honedge", "Bunnelby", "Rockruff","Jangmo'o"};
+    int deckLength = pokemon.length;
+    String[] deck = new String[deckLength];
     public void deck(){
-        for (i = 0)
+        //shuffle cards
+        for (int i = 0; i < pokemon.length; i++){
+            
+        }
     }
     
 }
