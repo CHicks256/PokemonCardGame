@@ -1,5 +1,3 @@
-package PokemonCardGame;
-
 
 /**
  * Write a description of class runner here.
