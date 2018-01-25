@@ -7,27 +7,47 @@
  */
 public class game
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    player p1 = new player();
+    player p2 = new player();
+    static deck d = new deck();
+    static int numOfPlayers = 2;
+    static boolean p1Turn = false;
+    static boolean p2Turn = false;
+    static int playerTurn = (int)(Math.random() * numOfPlayers);
+    static boolean gameInProgress = true;
 
-    /**
-     * Constructor for objects of class game
-     */
-    public game()
-    {
-        // initialise instance variables
-        x = 0;
+    public static void play(){
+        d.shuffle();
+        player p1 = new player();
+        player p2 = new player();
+        //give players pokemon
+        p1.setName(d.shuffledPokemon.get(0));
+        d.shuffledPokemon.remove(0);
+        p2.setName(d.shuffledPokemon.get(0));
+        d.shuffledPokemon.remove(0);
+        
+        while (p1.health >= 0 || p2.health >= 0){
+            if (playerTurn == 1){ 
+                p1Turn = true;
+            }
+            else{
+                p2Turn = true;
+            }
+            
+            while (p1Turn){
+                p1.turn();
+                p1Turn = false;
+                p2Turn = true;
+                break;
+            }
+
+            /**while (p2Turn){
+                p2.turn();
+                p2Turn = false;
+                p1Turn = true;
+                break;
+            }**/
+        }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }
