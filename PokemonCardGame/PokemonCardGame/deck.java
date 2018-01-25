@@ -1,3 +1,5 @@
+package PokemonCardGame;
+
 
 /**
  * Write a description of class deck here.

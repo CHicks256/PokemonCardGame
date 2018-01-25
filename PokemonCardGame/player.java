@@ -11,7 +11,7 @@ public class player
     deck d = new deck();
     game g = new game();
     private String name;
-    String choice = "attack";
+    //String choice = "attack";
     public void setName(String t){
         name = t;
         System.out.println(name);
@@ -32,6 +32,8 @@ public class player
 
     public void turn(){
         //choose what to do; attack, defend, item?
+        System.out.print("What do you want to do? ");
+        String choice = scanner.getString();
         if(choice == "attack"){
             //choose who to attack
             this.attack();
