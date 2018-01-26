@@ -16,7 +16,7 @@ public class deck
             "Sewaddle", "Honedge", "Bunnelby", "Rockruff","Jangmo'o"};
     ArrayList<String> shuffledPokemon = new ArrayList<String>();
     int index = random.nextInt(pokemon.length);
-
+/**
     public void shuffle(){
         //shuffles pokemon into an ArrayList
         for (String i : pokemon){
@@ -27,15 +27,34 @@ public class deck
             //pokemon.remove(1);
         }
         //debug code
-            //System.out.print(shuffledPokemon.get(0));
-            //System.out.print(shuffledPokemon.size());
-            System.out.println(shuffledPokemon);
+        //System.out.print(shuffledPokemon.get(0));
+        //System.out.print(shuffledPokemon.size());
+        System.out.println(shuffledPokemon);
     }
 
+    
     //debug method
     public static void main(){
         deck d = new deck();
         d.shuffle();
     }
-
+**/
+      public void shuffle(String [] pokemon){
+        shuffledPokemon.clear();
+          //shuffles pokemon into an ArrayList
+        for (int i = 0; i < pokemon.length; i++){
+            int r = (int)(Math.random() * (pokemon.length - 1));   
+            String temp = pokemon[r];
+            pokemon[r] = pokemon[i];
+            pokemon[i] = temp;
+        }
+        for (int i = 0; i<pokemon.length; i++){
+         shuffledPokemon.add(pokemon[i]);
+        }
+        System.out.println(shuffledPokemon);
+        
+        //debug code
+        //System.out.print(shuffledPokemon.get(0));
+        //System.out.print(shuffledPokemon.size());
+    } 
 }

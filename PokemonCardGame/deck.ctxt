@@ -1,7 +1,6 @@
 #BlueJ class context
 comment0.target=deck
-comment1.params=
-comment1.target=void\ shuffle()
-comment2.params=
-comment2.target=void\ main()
-numComments=3
+comment1.params=pokemon
+comment1.target=void\ shuffle(java.lang.String[])
+comment1.text=\r\n\ \ \ \ public\ void\ shuffle(){\r\n\ \ \ \ \ \ \ \ //shuffles\ pokemon\ into\ an\ ArrayList\r\n\ \ \ \ \ \ \ \ for\ (String\ i\ \:\ pokemon){\r\n\ \ \ \ \ \ \ \ \ \ \ \ index\ \=\ random.nextInt(pokemon.length);\r\n\ \ \ \ \ \ \ \ \ \ \ \ shuffledPokemon.add(pokemon[index]);\r\n\ \ \ \ \ \ \ \ \ \ \ \ //This\ should\ fix\ the\ problem\ of\ Pokemon\ being\ in\ the\ shuffled\ array\ twice,\ however\r\n\ \ \ \ \ \ \ \ \ \ \ \ //remove\ won't\ recognize\ index\ as\ an\ integer,\ even\ though\ it\ is\r\n\ \ \ \ \ \ \ \ \ \ \ \ //pokemon.remove(1);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ //debug\ code\r\n\ \ \ \ \ \ \ \ //System.out.print(shuffledPokemon.get(0));\r\n\ \ \ \ \ \ \ \ //System.out.print(shuffledPokemon.size());\r\n\ \ \ \ \ \ \ \ System.out.println(shuffledPokemon);\r\n\ \ \ \ }\r\n\r\n\ \ \ \ \r\n\ \ \ \ //debug\ method\r\n\ \ \ \ public\ static\ void\ main(){\r\n\ \ \ \ \ \ \ \ deck\ d\ \=\ new\ deck();\r\n\ \ \ \ \ \ \ \ d.shuffle();\r\n\ \ \ \ }\r\n
+numComments=2

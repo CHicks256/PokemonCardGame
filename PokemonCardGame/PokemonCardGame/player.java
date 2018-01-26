@@ -1,3 +1,5 @@
+package PokemonCardGame;
+
 
 /**
  * Players are given all necessary things fo this game to run.

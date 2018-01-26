@@ -7,8 +7,8 @@
  */
 public class game
 {
-    player p1 = new player();
-    player p2 = new player();
+    //player p1 = new player();
+    //player p2 = new player();
     static deck d = new deck();
     static int numOfPlayers = 2;
     static boolean p1Turn = false;
@@ -17,12 +17,13 @@ public class game
     static boolean gameInProgress = true;
 
     public static void play(){
-        d.shuffle();
+        d.shuffle(d.pokemon);
         player p1 = new player();
         player p2 = new player();
         //give players pokemon
         p1.setName(d.shuffledPokemon.get(0));
         d.shuffledPokemon.remove(0);
+        //System.out.println(d.shuffledPokemon);
         p2.setName(d.shuffledPokemon.get(0));
         d.shuffledPokemon.remove(0);
         
@@ -41,13 +42,16 @@ public class game
                 break;
             }
 
-            /**while (p2Turn){
+            while (p2Turn){
                 p2.turn();
                 p2Turn = false;
                 p1Turn = true;
                 break;
-            }**/
+            }
         }
-    }
-
+        }
+       /** public static void main(){
+         d.shuffle(d.pokemon);   
+        }
+        **/
 }
